@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
           {/* Buttons */}
           <div className="hero-actions">
             <Link to="/contact" className="btn btn-primary">
-              {t('hero.contactButton')} <ArrowRight size={20} style={{ marginLeft: '8px' }} />
+              {t('hero.contactButton')} <ArrowRight size={18} className="btn-icon" />
             </Link>
             
             <Link to="/markets" className="btn btn-outline">

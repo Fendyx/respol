@@ -148,7 +148,34 @@
     }
   },
   "contact": {
-    "title": "Skontaktuj się",
-    "subtitle": "Gotowy omówić swoje potrzeby?"
+    "label": "Skontaktuj się",
+    "title": "Kontakt",
+    "description": "Nasz zespół handlowy jest gotowy odpowiedzieć na pytania i przygotować wyceny.",
+    "info": {
+      "phone": {
+        "title": "Telefon",
+        "text": "Pn - Pt: 8:00 - 17:00 CET"
+      },
+      "email": {
+        "title": "Email",
+        "text": "Odpowiadamy w ciągu 24 godzin"
+      },
+      "note": "W pilnych sprawach prosimy o kontakt telefoniczny w godzinach pracy."
+    },
+    "form": {
+      "name": "Imię i Nazwisko",
+      "namePlaceholder": "Jan Kowalski",
+      "email": "Adres Email",
+      "emailPlaceholder": "jan@firma.pl",
+      "company": "Firma (Opcjonalnie)",
+      "companyPlaceholder": "Twoja Firma Sp. z o.o.",
+      "message": "Wiadomość",
+      "messagePlaceholder": "Jak możemy Ci pomóc?",
+      "submit": "Wyślij Wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Wiadomość wysłana pomyślnie! Skontaktujemy się wkrótce.",
+      "error": "Ups! Wystąpił problem z wysłaniem formularza.",
+      "networkError": "Błąd sieci. Spróbuj ponownie później."
+    }
   }
 }

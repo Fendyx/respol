@@ -148,7 +148,34 @@
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Ready to discuss your supply needs?"
+    "label": "Get in Touch",
+    "title": "Contact Us",
+    "description": "Our trading team is ready to answer your questions and provide quotes.",
+    "info": {
+      "phone": {
+        "title": "Phone",
+        "text": "Mon - Fri: 8:00 - 17:00 CET"
+      },
+      "email": {
+        "title": "Email",
+        "text": "We respond within 24 hours"
+      },
+      "note": "For urgent inquiries, please call us directly during business hours."
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company (Optional)",
+      "companyPlaceholder": "Your Company Ltd.",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We will contact you soon.",
+      "error": "Oops! There was a problem sending your form.",
+      "networkError": "Network error. Please try again later."
+    }
   }
 }

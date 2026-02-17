@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/" className="footer-link">{t('footer.links.home')}</Link></li>
               <li><a href="#about" className="footer-link">{t('footer.links.about')}</a></li>
               <li><a href="#products" className="footer-link">{t('footer.links.products')}</a></li>
-              <li><a href="#markets" className="footer-link">{t('footer.links.logistics')}</a></li>
+              <li><a href="#logistics" className="footer-link">{t('footer.links.logistics')}</a></li>
               <li><Link to="/contact" className="footer-link">{t('footer.links.contact')}</Link></li>
             </ul>
           </div>
@@ -42,10 +42,8 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="footer-col-title">{t('footer.columns.legal')}</h4>
             <ul className="footer-links">
-              <li><Link to="/legal/privacy" className="footer-link">{t('footer.links.privacy')}</Link></li>
-              <li><Link to="/legal/terms" className="footer-link">{t('footer.links.terms')}</Link></li>
-              <li><Link to="/legal/cookies" className="footer-link">{t('footer.links.cookies')}</Link></li>
-              <li><Link to="/legal/compliance" className="footer-link">{t('footer.links.compliance')}</Link></li>
+              <li><Link to="/privacy" className="footer-link">{t('footer.links.privacy')}</Link></li>
+              <li><Link to="/terms" className="footer-link">{t('footer.links.terms')}</Link></li>
             </ul>
           </div>
 
@@ -54,19 +52,12 @@ export const Footer: React.FC = () => {
             <h4 className="footer-col-title">{t('footer.columns.contact')}</h4>
             <ul className="contact-list">
               <li className="contact-item">
-                <MapPin className="contact-icon" />
-                <span>
-                  {t('footer.contact.address.line1')}<br />
-                  {t('footer.contact.address.line2')}
-                </span>
-              </li>
-              <li className="contact-item">
                 <Phone className="contact-icon" />
                 <a href="tel:+48221234567" className="footer-link">+48 22 123 45 67</a>
               </li>
               <li className="contact-item">
                 <Mail className="contact-icon" />
-                <a href="mailto:office@res-pol.pl" className="footer-link">office@res-pol.pl</a>
+                <a href="mailto:office@res-pol.pl" className="footer-link">info@res-pol.pl</a>
               </li>
             </ul>
           </div>
@@ -77,10 +68,6 @@ export const Footer: React.FC = () => {
           <p className="footer-copyright">
             {t('footer.copyright', { year: currentYear })}
           </p>
-          <div className="footer-socials">
-            <a href="#" className="social-link">LinkedIn</a>
-            <a href="#" className="social-link">Twitter</a>
-          </div>
         </div>
       </div>
     </footer>

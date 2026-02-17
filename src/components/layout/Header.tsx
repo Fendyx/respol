@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { X, Globe, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next"; // ✅ Import this
+import { useTranslation } from "react-i18next";
 import './Header.css';
 
 export const Header: React.FC = () => {
-  const { i18n, t } = useTranslation(); // ✅ Get i18n instance
+  const { i18n, t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -48,7 +48,8 @@ export const Header: React.FC = () => {
     i18n.changeLanguage(lng);
     document.documentElement.lang = lng;
     setIsLangOpen(false);
-    localStorage.setItem('i18nextLng', lng); // ✅ Persist selection
+    setIsMobileMenuOpen(false); // ✅ Auto-close menu when language changes
+    localStorage.setItem('i18nextLng', lng);
   };
 
   const navLinks = [
@@ -101,7 +102,7 @@ export const Header: React.FC = () => {
               aria-label="Change language"
             >
               <Globe size={16} />
-              <span>{currentLang.toUpperCase()}</span> {/* ✅ Dynamic language */}
+              <span>{currentLang.toUpperCase()}</span>
               <ChevronDown size={14} style={{ opacity: 0.5 }} />
             </button>
             
@@ -128,22 +129,35 @@ export const Header: React.FC = () => {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="mobile-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? (
-            <X size={24} />
-          ) : (
-            <div className="burger-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          )}
-        </button>
+        {/* Mobile Actions - Language + Burger */}
+        <div className="mobile-actions-right">
+          {/* ✅ Mobile Language Toggle (Visible without menu) */}
+          <button
+            className="mobile-lang-toggle"
+            onClick={() => changeLanguage(currentLang === 'en' ? 'pl' : 'en')}
+            aria-label="Toggle language"
+          >
+            <Globe size={20} />
+            <span className="mobile-lang-code">{currentLang.toUpperCase()}</span>
+          </button>
+
+          {/* Mobile Toggle (Burger) */}
+          <button
+            className="mobile-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X size={24} />
+            ) : (
+              <div className="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -164,19 +178,23 @@ export const Header: React.FC = () => {
             </nav>
             
             <div className="mobile-actions">
-              <div className="mobile-lang-buttons">
-                <button 
-                  className={`lang-btn mobile-lang-btn ${currentLang === 'en' ? 'active' : ''}`}
-                  onClick={() => changeLanguage('en')}
-                >
-                  <Globe size={16} /> EN
-                </button>
-                <button 
-                  className={`lang-btn mobile-lang-btn ${currentLang === 'pl' ? 'active' : ''}`}
-                  onClick={() => changeLanguage('pl')}
-                >
-                  PL
-                </button>
+              {/* Language in menu (optional, for clarity) */}
+              <div className="mobile-lang-section">
+                <p className="mobile-lang-label">Language / Język</p>
+                <div className="mobile-lang-buttons">
+                  <button 
+                    className={`lang-btn mobile-lang-btn ${currentLang === 'en' ? 'active' : ''}`}
+                    onClick={() => changeLanguage('en')}
+                  >
+                    <Globe size={16} /> EN
+                  </button>
+                  <button 
+                    className={`lang-btn mobile-lang-btn ${currentLang === 'pl' ? 'active' : ''}`}
+                    onClick={() => changeLanguage('pl')}
+                  >
+                    PL
+                  </button>
+                </div>
               </div>
               
               <Link to="/contact" className="header-contact-btn mobile-contact-btn" onClick={handleNavClick}>

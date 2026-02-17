@@ -1,13 +1,13 @@
 import React, { useState, FormEvent } from 'react';
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, Send } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 import { Toast } from '../components/ui/Toast';
 import './Contact.css';
 
 export const Contact: React.FC = () => {
-  // Вставь сюда свой ID с сайта Formspree
-  const FORMSPREE_ID = 'mpqjrrag'; // <--- ЗАМЕНИ ЭТО НА СВОЙ ID
+  const { t } = useTranslation();
+  const FORMSPREE_ID = 'mpqjrrag';
 
-  // Состояние для полей формы
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,7 +18,6 @@ export const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [toast, setToast] = useState<{msg: string, type: 'success'|'error'} | null>(null);
 
-  // Обработка ввода
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -26,7 +25,6 @@ export const Contact: React.FC = () => {
     });
   };
 
-  // Реальная отправка через Formspree
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -36,23 +34,20 @@ export const Contact: React.FC = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json' // Важно, чтобы не перекидывало на сайт Formspree
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData)
       });
 
       if (response.ok) {
-        // Успех!
-        setToast({ msg: "Message sent successfully! We will contact you soon.", type: "success" });
-        setFormData({ name: '', email: '', company: '', message: '' }); // Очистить форму
+        setToast({ msg: t('contact.form.success'), type: "success" });
+        setFormData({ name: '', email: '', company: '', message: '' });
       } else {
-        // Ошибка от Formspree (например, спам)
         const data = await response.json();
-        setToast({ msg: data.error || "Oops! There was a problem sending your form.", type: "error" });
+        setToast({ msg: data.error || t('contact.form.error'), type: "error" });
       }
     } catch (error) {
-      // Ошибка сети
-      setToast({ msg: "Network error. Please try again later.", type: "error" });
+      setToast({ msg: t('contact.form.networkError'), type: "error" });
     } finally {
       setIsSubmitting(false);
     }
@@ -62,73 +57,73 @@ export const Contact: React.FC = () => {
     <div className="contact-page">
       <div className="contact-container">
         
-        {/* Заголовок */}
+        {/* Header */}
         <div className="contact-header">
-          <span className="contact-label">Get in Touch</span>
-          <h1 className="contact-title">Contact Us</h1>
+          <span className="contact-label">{t('contact.label')}</span>
+          <h1 className="contact-title">{t('contact.title')}</h1>
           <p className="contact-desc">
-            Our trading team is ready to answer your questions and provide quotes.
+            {t('contact.description')}
           </p>
         </div>
 
         <div className="contact-grid">
           
-          {/* Левая колонка: Инфо */}
+          {/* Left Column: Contact Info */}
           <div className="contact-info-card">
             <div className="info-item">
-              <h3 className="info-title"><MapPin className="info-icon" /> HQ Address</h3>
-              <p className="info-text">
-                Res-Pol Trading Sp. z o.o.<br />
-                ul. Przemysłowa 12/4<br />
-                00-123 Warsaw, Poland
-              </p>
-            </div>
-            <div className="info-item">
-              <h3 className="info-title"><Phone className="info-icon" /> Phone</h3>
-              <p className="info-text">
+              <div className="info-icon-wrapper">
+                <Phone className="info-icon" />
+              </div>
+              <div className="info-content">
+                <h3 className="info-subtitle">{t('contact.info.phone.title')}</h3>
                 <a href="tel:+48221234567" className="info-link">+48 22 123 45 67</a>
-              </p>
+                <p className="info-text">{t('contact.info.phone.text')}</p>
+              </div>
             </div>
+            
             <div className="info-item">
-              <h3 className="info-title"><Mail className="info-icon" /> Email</h3>
-              <p className="info-text">
+              <div className="info-icon-wrapper">
+                <Mail className="info-icon" />
+              </div>
+              <div className="info-content">
+                <h3 className="info-subtitle">{t('contact.info.email.title')}</h3>
                 <a href="mailto:office@res-pol.pl" className="info-link">office@res-pol.pl</a>
-              </p>
+                <p className="info-text">{t('contact.info.email.text')}</p>
+              </div>
             </div>
-            <div className="info-item">
-              <h3 className="info-title"><Clock className="info-icon" /> Hours</h3>
-              <p className="info-text">
-                Mon - Fri: 8:00 - 17:00<br />
-                Sat - Sun: Closed
-              </p>
+
+            <div className="info-divider" />
+
+            <div className="info-note">
+              <p>{t('contact.info.note')}</p>
             </div>
           </div>
 
-          {/* Правая колонка: Форма */}
+          {/* Right Column: Form */}
           <div className="contact-form-card">
             <form onSubmit={handleSubmit} className="form-grid">
               
               <div className="form-row">
                 <div className="form-group">
-                  <label className="form-label">Full Name</label>
+                  <label className="form-label">{t('contact.form.name')}</label>
                   <input 
                     type="text" 
                     name="name" 
                     required 
                     className="form-input" 
-                    placeholder="John Doe"
+                    placeholder={t('contact.form.namePlaceholder')}
                     value={formData.name}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Email Address</label>
+                  <label className="form-label">{t('contact.form.email')}</label>
                   <input 
                     type="email" 
                     name="email" 
                     required 
                     className="form-input" 
-                    placeholder="john@company.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -136,31 +131,32 @@ export const Contact: React.FC = () => {
               </div>
 
               <div className="form-group">
-                <label className="form-label">Company (Optional)</label>
+                <label className="form-label">{t('contact.form.company')}</label>
                 <input 
                   type="text" 
                   name="company" 
                   className="form-input" 
-                  placeholder="Your Company Ltd."
+                  placeholder={t('contact.form.companyPlaceholder')}
                   value={formData.company}
                   onChange={handleChange}
                 />
               </div>
 
               <div className="form-group">
-                <label className="form-label">Message</label>
+                <label className="form-label">{t('contact.form.message')}</label>
                 <textarea 
                   name="message" 
                   required 
                   className="form-textarea" 
-                  placeholder="How can we help you?"
+                  placeholder={t('contact.form.messagePlaceholder')}
                   value={formData.message}
                   onChange={handleChange}
                 />
               </div>
 
               <button type="submit" className="submit-btn" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
+                <Send className="btn-icon" size={18} />
               </button>
 
             </form>
@@ -169,7 +165,7 @@ export const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Всплывающее уведомление */}
+      {/* Toast Notification */}
       {toast && (
         <Toast 
           message={toast.msg} 
