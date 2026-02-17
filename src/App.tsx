@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Лайаут (Шапка и Подвал)
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
+import { ScrollToTop } from './hooks/ScrollToTop';
 
 // Страницы
 import { Home } from './pages/Home';
@@ -14,6 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ✅ Auto-scroll to top on route change */}
       <div className="app-layout">
         {/* Хедер будет виден на всех страницах */}
         <Header />

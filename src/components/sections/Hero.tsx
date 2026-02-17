@@ -43,13 +43,15 @@ export const Hero: React.FC = () => {
                     
           {/* Buttons */}
           <div className="hero-actions">
+            {/* Contact Page - React Router Link */}
             <Link to="/contact" className="btn btn-primary">
               {t('hero.contactButton')} <ArrowRight size={18} className="btn-icon" />
             </Link>
             
-            <Link to="/markets" className="btn btn-outline">
+            {/* Products Section - Anchor Link (scrolls on same page) */}
+            <a href="#products" className="btn btn-outline">
               {t('hero.marketsButton')}
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

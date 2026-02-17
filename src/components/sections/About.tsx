@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 import './About.css';
+import { Link } from 'react-router-dom';
 
 export const About: React.FC = () => {
   const { t } = useTranslation();
@@ -40,7 +41,7 @@ export const About: React.FC = () => {
             </div>
             
             <div className="about-cta-mobile">
-              <a href="#contact" className="cta-button">{t('about.ctaButton')}</a>
+              <Link to="/contact" className="cta-button">{t('about.ctaButton')}</Link>
             </div>
           </div>
           
