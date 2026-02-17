@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "badge": "International Trading Partner",
+    "title": "International supply of <highlight>energy</highlight> & <highlight>fertilizers</highlight>",
+    "contactButton": "Contact Us",
+    "marketsButton": "View Markets"
+  },
+  "about": {
+    "label": "About Res-Pol",
+    "heading": "Connecting markets with reliable resources",
+    "description": "Res-Pol is a leading Polish trading company specializing in the supply of energy coal and mineral fertilizers for industrial and municipal sectors across international markets.",
+    "features": [
+      "International Logistics Network",
+      "Quality Certified Products",
+      "Sustainable Supply Chain",
+      "Reliable Partnership"
+    ],
+    "statsCard": {
+      "title": "12+ Countries",
+      "text": "Active trading network across Europe and Asia"
+    },
+    "ctaButton": "Get in Touch"
+  },
+  "products": {
+    "label": "Our Expertise",
+    "title": "Core Business Areas",
+    "subtitle": "We operate at the intersection of energy, agriculture, and logistics, providing essential resources to industries worldwide.",
+    "learnMore": "Learn more",
+    "areas": {
+      "coal": {
+        "title": "Energy Coal",
+        "description": "Supply of high-grade energy coal for power generation companies and the municipal heating sector. We ensure consistent quality and reliable delivery schedules."
+      },
+      "fertilizers": {
+        "title": "Mineral Fertilizers",
+        "description": "International supply of nitrogen, phosphate, and potassium fertilizers for modern agriculture. Supporting sustainable farming with premium chemical products."
+      },
+      "logistics": {
+        "title": "Logistics & Supply Chain",
+        "description": "Comprehensive rail and maritime logistics solutions. We manage the entire supply chain from the port of origin directly to the final client's facility."
+      }
+    }
+  },
+  "logistics": {
+    "title": "Strategic Logistics Routes",
+    "subtitle": "Connecting key markets across Eurasia",
+    "mapLoading": "Loading Map...",
+    "deliveryMethods": {
+      "maritime": {
+        "title": "Maritime",
+        "desc": "Global Port Operations"
+      },
+      "rail": {
+        "title": "Rail Freight",
+        "desc": "Cross-border Logistics"
+      },
+      "road": {
+        "title": "Road Transport",
+        "desc": "Final Mile Delivery"
+      }
+    },
+    "regions": {
+      "europe": {
+        "name": "Europe",
+        "countries": [
+          "Bulgaria",
+          "Ukraine",
+          "Germany",
+          "Poland",
+          "Spain",
+          "Italy"
+        ]
+      },
+      "caucasus": {
+        "name": "South Caucasus",
+        "countries": [
+          "Georgia",
+          "Azerbaijan",
+          "Armenia"
+        ]
+      },
+      "asia": {
+        "name": "Asia",
+        "countries": [
+          "Kazakhstan",
+          "Uzbekistan",
+          "Turkey"
+        ]
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Res-Pol?",
+    "subtitle": "We build long-term value through trust, efficiency, and market expertise.",
+    "features": {
+      "reliableSupply": "Reliable Supply",
+      "globalPartnerships": "Global Partnerships",
+      "efficientLogistics": "Efficient Logistics",
+      "flexibleTrading": "Flexible Trading"
+    }
+  },
+  "cta": {
+    "title": "Ready to start cooperation?",
+    "text": "Connect with our trading desk for quotes on energy coal, fertilizers, or logistics solutions.",
+    "button": "Start Cooperation"
+  },
+  "footer": {
+    "brand": {
+      "description": "International trading company supplying energy resources and fertilizers. Reliable logistics across Europe and Asia."
+    },
+    "columns": {
+      "company": "Company",
+      "legal": "Legal",
+      "contact": "Contact"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "logistics": "Logistics",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "compliance": "Compliance"
+    },
+    "contact": {
+      "address": {
+        "line1": "ul. Przemysłowa 12/4",
+        "line2": "00-123 Warsaw, Poland"
+      }
+    },
+    "copyright": "© {{year}} Res-Pol Trading Sp. z o.o. All rights reserved.",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "logistics": "Logistics",
+    "contact": "Contact",
+    "languageSwitch": {
+      "en": "EN",
+      "pl": "PL"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to discuss your supply needs?"
+  }
+}

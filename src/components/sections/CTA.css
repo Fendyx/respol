@@ -1,0 +1,133 @@
+.cta-section {
+    padding: 6rem 0; /* py-24 */
+    background-color: #ffffff;
+  }
+  
+  .cta-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .cta-container {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  /* Карточка CTA (Темный блок) */
+  .cta-card {
+    position: relative;
+    background-color: #111827; /* gray-900 */
+    border-radius: 1.5rem; /* rounded-3xl */
+    padding: 3rem 1.5rem; /* p-12 */
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  @media (min-width: 768px) {
+    .cta-card {
+      padding: 5rem; /* p-20 */
+    }
+  }
+  
+  /* Фон и Градиенты */
+  .cta-bg-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(to bottom left, #1f2937, #111827); /* gray-800 to gray-900 */
+  }
+  
+  /* Декоративные пятна (Blobs) */
+  .cta-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(64px); /* blur-3xl */
+    z-index: 1;
+  }
+  
+  .cta-blob-top {
+    top: -6rem; /* -top-24 */
+    right: -6rem; /* -right-24 */
+    width: 16rem; /* w-64 */
+    height: 16rem; /* h-64 */
+    background-color: var(--color-primary, #005f3a);
+    opacity: 0.2;
+  }
+  
+  .cta-blob-bottom {
+    bottom: 0;
+    left: 0;
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-accent, #f4d03f);
+    opacity: 0.1;
+  }
+  
+  /* Контент */
+  .cta-content {
+    position: relative;
+    z-index: 10;
+    max-width: 48rem; /* max-w-3xl */
+    margin: 0 auto;
+  }
+  
+  .cta-title {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 768px) {
+    .cta-title {
+      font-size: 3rem; /* 5xl */
+    }
+  }
+  
+  .cta-text {
+    color: #d1d5db; /* gray-300 */
+    font-size: 1.125rem; /* lg */
+    line-height: 1.625;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Кнопка CTA */
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent, #f4d03f);
+    color: #111827; /* gray-900 */
+    font-weight: 700;
+    font-size: 1.125rem; /* lg */
+    padding: 0 2rem;
+    height: 3.5rem; /* h-14 */
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    filter: brightness(105%); /* Легкое осветление вместо opacity */
+    box-shadow: 0 10px 15px -3px rgba(244, 208, 63, 0.3); /* Тень цвета accent */
+  }
+  
+  .cta-btn-icon {
+    margin-left: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s;
+  }
+  
+  .cta-button:hover .cta-btn-icon {
+    transform: translateX(4px);
+  }

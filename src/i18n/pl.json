@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "badge": "Międzynarodowy Partner Handlowy",
+    "title": "Międzynarodowa dostawa <highlight>energii</highlight> i <highlight>nawozów</highlight>",
+    "contactButton": "Skontaktuj się",
+    "marketsButton": "Zobacz Rynki"
+  },
+  "about": {
+    "label": "O Res-Pol",
+    "heading": "Łączymy rynki z niezawodnymi zasobami",
+    "description": "Res-Pol to wiodąca polska firma handlowa specjalizująca się w dostawach węgla energetycznego i nawozów mineralnych dla sektorów przemysłowych i komunalnych na rynkach międzynarodowych.",
+    "features": [
+      "Międzynarodowa Sieć Logistyczna",
+      "Certyfikowane Produkty",
+      "Zrównoważony Łańcuch Dostaw",
+      "Niezawodne Partnerstwo"
+    ],
+    "statsCard": {
+      "title": "12+ Krajów",
+      "text": "Aktywna sieć handlowa w Europie i Azji"
+    },
+    "ctaButton": "Skontaktuj się"
+  },
+  "products": {
+    "label": "Nasza Ekspertyza",
+    "title": "Główne Obszary Działalności",
+    "subtitle": "Działamy na styku energii, rolnictwa i logistyki, dostarczając niezbędne zasoby dla przemysłu na całym świecie.",
+    "learnMore": "Dowiedz się więcej",
+    "areas": {
+      "coal": {
+        "title": "Węgiel Energetyczny",
+        "description": "Dostawy wysokiej jakości węgla energetycznego dla elektrowni i sektora ciepłowniczego. Zapewniamy stałą jakość i niezawodne harmonogramy dostaw."
+      },
+      "fertilizers": {
+        "title": "Nawozy Mineralne",
+        "description": "Międzynarodowa dostawa nawozów azotowych, fosforowych i potasowych dla nowoczesnego rolnictwa. Wspieramy zrównoważone rolnictwo produktami premium."
+      },
+      "logistics": {
+        "title": "Logistyka i Łańcuch Dostaw",
+        "description": "Kompleksowe rozwiązania logistyczne kolejowe i morskie. Zarządzamy całym łańcuchem dostaw od portu pochodzenia bezpośrednio do obiektu klienta."
+      }
+    }
+  },
+  "logistics": {
+    "title": "Strategiczne Trasy Logistyczne",
+    "subtitle": "Łączymy kluczowe rynki Eurazji",
+    "mapLoading": "Ładowanie mapy...",
+    "deliveryMethods": {
+      "maritime": {
+        "title": "Transport Morski",
+        "desc": "Globalne Operacje Portowe"
+      },
+      "rail": {
+        "title": "Transport Kolejowy",
+        "desc": "Logistyka Transgraniczna"
+      },
+      "road": {
+        "title": "Transport Drogowy",
+        "desc": "Dostawa Ostatniej Mili"
+      }
+    },
+    "regions": {
+      "europe": {
+        "name": "Europa",
+        "countries": [
+          "Bulgaria",
+          "Ukraine",
+          "Germany",
+          "Poland",
+          "Spain",
+          "Italy"
+        ]
+      },
+      "caucasus": {
+        "name": "Kaukaz Południowy",
+        "countries": [
+          "Georgia",
+          "Azerbaijan",
+          "Armenia"
+        ]
+      },
+      "asia": {
+        "name": "Azja",
+        "countries": [
+          "Kazakhstan",
+          "Uzbekistan",
+          "Turkey"
+        ]
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Dlaczego Res-Pol?",
+    "subtitle": "Budujemy długoterminową wartość poprzez zaufanie, efektywność i ekspercką wiedzę rynkową.",
+    "features": {
+      "reliableSupply": "Niezawodne Dostawy",
+      "globalPartnerships": "Globalne Partnerstwa",
+      "efficientLogistics": "Efektywna Logistyka",
+      "flexibleTrading": "Elastyczny Handel"
+    }
+  },
+  "cta": {
+    "title": "Gotowy na współpracę?",
+    "text": "Skontaktuj się z naszym działem handlowym po wyceny węgla energetycznego, nawozów lub rozwiązania logistyczne.",
+    "button": "Rozpocznij Współpracę"
+  },
+  "footer": {
+    "brand": {
+      "description": "Międzynarodowa firma handlowa dostarczająca zasoby energetyczne i nawozy. Niezawodna logistyka w Europie i Azji."
+    },
+    "columns": {
+      "company": "Firma",
+      "legal": "Prawne",
+      "contact": "Kontakt"
+    },
+    "links": {
+      "home": "Strona Główna",
+      "about": "O Nas",
+      "products": "Produkty",
+      "logistics": "Logistyka",
+      "contact": "Kontakt",
+      "privacy": "Polityka Prywatności",
+      "terms": "Regulamin",
+      "cookies": "Polityka Cookies",
+      "compliance": "Zgodność"
+    },
+    "contact": {
+      "address": {
+        "line1": "ul. Przemysłowa 12/4",
+        "line2": "00-123 Warszawa, Polska"
+      }
+    },
+    "copyright": "© {{year}} Res-Pol Trading Sp. z o.o. Wszystkie prawa zastrzeżone.",
+    "socials": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  },
+  "header": {
+    "home": "Strona Główna",
+    "about": "O Nas",
+    "products": "Produkty",
+    "logistics": "Logistyka",
+    "contact": "Kontakt",
+    "languageSwitch": {
+      "en": "EN",
+      "pl": "PL"
+    }
+  },
+  "contact": {
+    "title": "Skontaktuj się",
+    "subtitle": "Gotowy omówić swoje potrzeby?"
+  }
+}
