@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
               </div>
               <div className="info-content">
                 <h3 className="info-subtitle">{t('contact.info.phone.title')}</h3>
-                <a href="tel:+48221234567" className="info-link">+48 22 123 45 67</a>
+                <a href="tel:+48221234567" className="info-link">+48 577 480 689</a>
                 <p className="info-text">{t('contact.info.phone.text')}</p>
               </div>
             </div>
