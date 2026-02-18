@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="contact-item">
                 <Mail className="contact-icon" />
-                <a href="mailto:office@res-pol.pl" className="footer-link">info@res-pol.pl</a>
+                <a href="mailto:office@res-pol.pl" className="footer-link">sales@res-pol.pl</a>
               </li>
             </ul>
           </div>

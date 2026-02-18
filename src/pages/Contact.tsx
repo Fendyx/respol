@@ -87,7 +87,7 @@ export const Contact: React.FC = () => {
               </div>
               <div className="info-content">
                 <h3 className="info-subtitle">{t('contact.info.email.title')}</h3>
-                <a href="mailto:office@res-pol.pl" className="info-link">office@res-pol.pl</a>
+                <a href="mailto:office@res-pol.pl" className="info-link">sales@res-pol.pl</a>
                 <p className="info-text">{t('contact.info.email.text')}</p>
               </div>
             </div>
