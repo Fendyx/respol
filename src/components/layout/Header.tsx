@@ -52,12 +52,13 @@ export const Header: React.FC = () => {
     localStorage.setItem('i18nextLng', lng);
   };
 
+  // ✅ Separate routes from anchor links
   const navLinks = [
-    { name: t('header.home'), href: "/" },
-    { name: t('header.about'), href: "#about" },
-    { name: t('header.products'), href: "#products" },
-    { name: t('header.logistics'), href: "#markets" },
-    { name: t('header.contact'), href: "/contact" },
+    { name: t('header.home'), href: "/", isRoute: true },
+    { name: t('header.about'), href: "#about", isRoute: false },
+    { name: t('header.products'), href: "#products", isRoute: false },
+    { name: t('header.logistics'), href: "#markets", isRoute: false },
+    { name: t('header.contact'), href: "/contact", isRoute: true },
   ];
 
   const handleNavClick = () => {
@@ -87,9 +88,15 @@ export const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="desktop-nav">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="nav-link">
-              {link.name}
-            </a>
+            link.isRoute ? (
+              <Link key={link.name} to={link.href} className="nav-link" onClick={handleNavClick}>
+                {link.name}
+              </Link>
+            ) : (
+              <a key={link.name} href={link.href} className="nav-link">
+                {link.name}
+              </a>
+            )
           ))}
         </nav>
 
@@ -166,14 +173,25 @@ export const Header: React.FC = () => {
           <div className="mobile-menu-wrapper" onClick={(e) => e.stopPropagation()}>
             <nav className="mobile-nav">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="mobile-nav-link"
-                  onClick={handleNavClick}
-                >
-                  {link.name}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="mobile-nav-link"
+                    onClick={handleNavClick}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="mobile-nav-link"
+                    onClick={handleNavClick}
+                  >
+                    {link.name}
+                  </a>
+                )
               ))}
             </nav>
             

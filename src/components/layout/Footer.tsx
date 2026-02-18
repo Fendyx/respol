@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
             <ul className="contact-list">
               <li className="contact-item">
                 <Phone className="contact-icon" />
-                <a href="tel:+48221234567" className="footer-link">+48 22 123 45 67</a>
+                <a href="tel:+48221234567" className="footer-link">+48 577 480 689</a>
               </li>
               <li className="contact-item">
                 <Mail className="contact-icon" />
